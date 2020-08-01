@@ -1,0 +1,16 @@
+<div class="invitados-content regular-content">
+    <div class="container">
+        <h1>Invitados</h1>
+
+        <div class="invitados-lista">
+            {{#each dataInvitados}}
+                <div class="invitados-lista__instance">
+                    <p class="invitados-lista__instance__name">{{ this.name }}</p>
+                    <p class="invitados-lista__instance__email">{{ this.email }}</p>
+                    <p class="invitados-lista__instance__phone">{{ this.phone }}</p>
+                    <p class="invitados-lista__instance__link"><a href="/invitados/{{ this.id }}">Ver Detalles</a></p>
+                </div>
+            {{/each}}
+        </div><!-- /.invitados-lista -->
+    </div><!-- /.container -->
+</div><!-- /.invitados-content -->

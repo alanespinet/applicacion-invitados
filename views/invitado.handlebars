@@ -1,0 +1,19 @@
+<div class="invitado-content regular-content">
+    <div class="container">
+        <h1>Invitado: <span class="h">{{ dataInvitado.name }}</span></h1>
+
+        <p><strong>Email: </strong>{{ dataInvitado.email }}</p>
+        <p><strong>Teléfono: </strong>{{ dataInvitado.phone }}</p>
+
+        {{#with dataInvitado.address as | direc |}}
+            <p><strong>Dirección: </strong>
+                {{ direc.street }}, 
+                {{ direc.suite }}. 
+                {{ direc.city }}, 
+                {{ direc.zipcode }}
+            </p> 
+        {{/with}}
+
+        <a href="/invitados" class="invited-back-link">Ir Atrás</a>
+    </div><!-- /.container -->
+</div><!-- /.invitados-content -->
